@@ -1,0 +1,5985 @@
+<div class="main" id="printArea">
+ ﻿﻿﻿﻿﻿
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ <head>
+  <link href="/tps/styles/text.css" rel="stylesheet" type="text/css"/>
+  <link href="/tps/styles/css.css" rel="stylesheet" type="text/css"/>
+  <link href="/tps/styles/chtd_tab.css" rel="stylesheet" type="text/css"/>
+  <link href="/tps/styles/chtd.css" rel="stylesheet" type="text/css"/>
+  <style>
+   td {align: left;}
+  </style>
+ </head>
+ <script>
+  $jq(document).ready(function(){
+	popWatermark();
+});
+
+function openEditScreen(editUrl){
+    window.open(encodeURI(editUrl));
+    unblock();
+}
+
+function popWatermark(){
+	        var msgTop = 50;
+	        var msgLeft = 500;
+	        
+	        try{
+	        	msgTop = $jq("#printArea").position().top+50;
+	        	msgLeft = $jq("#printArea").position().left +$jq("#printArea").width()/2 +50;
+			}catch(e) {}
+			
+			$jq("#hidden_message_id")
+	        .css({
+	            fontSize: "100px", //watermark font size 
+	            color: "brown", //watermark color 
+	            fontWeight: "bolder", //watermark font weight 
+	            fontFamily: "verdana", //watermark font family 
+	            position: "absolute", //watermark position 必須為 "absolute" 
+	            width: "100px", //watermark div width 
+	            top: msgTop, //watermark position top 
+	            left: msgLeft //watermark position left 
+	        })
+	        .fadeTo("fast",0.3); //watermark 透明度 
+}
+
+function popWatermark2(){
+	        var msgTop = 200;
+	        var msgLeft = 500;
+			$jq("#hidden_message_id")
+	        .css({
+	            fontSize: "120px", //watermark font size 
+	            color: "brown", //watermark color 
+	            fontWeight: "bolder", //watermark font weight 
+	            fontFamily: "verdana", //watermark font family 
+	            position: "absolute", //watermark position 必須為 "absolute" 
+	            width: "120px", //watermark div width 
+	            top: msgTop, //watermark position top 
+	            left: msgLeft //watermark position left 
+	        })
+	        .fadeTo("fast",0.3); //watermark 透明度 
+}
+
+//共同供應契約顯示得標廠商清單
+function printBidder(pkItem){
+		//alert(pkItem);
+		
+		    var popupWindow = window.open('/tps/main/pms/tps/atm/atmAwardAction.do?method=qryCppObtain&pkAtmMain=51641272&pkAtmAwardItem='+pkItem+'&tenderCaseNo=104265S','showBidder','status=yes,toolbar=no,menubar=no,location=no,resizable=yes,scrollbars=yes,width=750,height=500',true);				
+		
+}
+ </script>
+ <table border="1" cellpadding="0" cellspacing="0" class="table_block tender_table" width="100%">
+  <caption style="display:none">
+   <center>
+    <font size="5">
+     決標公告
+    </font>
+   </center>
+   <div align="center" id="printAwardDate" style="display:block">
+    公告日:104/09/15
+   </div>
+  </caption>
+  <tbody>
+   <tr>
+    <td align="center" colspan="4" style="border:1px solid #FFFFFF;">
+     <center>
+      <h1>
+       決標公告
+      </h1>
+     </center>
+     <div align="center" id="printAwardDate" style="display:block">
+      <h3>
+       公告日:104/09/15
+      </h3>
+     </div>
+     <div class="remind_msg">
+     </div>
+    </td>
+   </tr>
+   <!-- delimiter 機關資料 Start -->
+   <tr class="award_table_tr_1">
+    <td align="center" bgcolor="#89C0C7" class="style1" rowspan="8" valign="middle" width="38">
+     <span class="newstop">
+      機
+      <br/>
+      關
+      <br/>
+      資
+      <br/>
+      料
+     </span>
+    </td>
+   </tr>
+   <tr class="award_table_tr_1">
+    <th align="left" bgcolor="#DAEBED" class="T11b" valign="middle" width="200">
+     機關代碼
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop" height="25">
+     3.32.80
+    </td>
+   </tr>
+   <tr class="award_table_tr_1">
+    <th align="left" bgcolor="#DAEBED" class="T11b" valign="middle" width="200">
+     機關名稱
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop" height="25">
+     臺北榮民總醫院
+    </td>
+   </tr>
+   <tr class="award_table_tr_1">
+    <th align="left" bgcolor="#DAEBED" class="T11b" valign="middle" width="200">
+     單位名稱
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop" height="25">
+     補給室
+    </td>
+   </tr>
+   <tr class="award_table_tr_1">
+    <th align="left" bgcolor="#DAEBED" class="T11b" valign="middle" width="200">
+     機關地址
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop" height="25">
+     112臺北市北投區石牌路2段201號
+    </td>
+   </tr>
+   <tr class="award_table_tr_1">
+    <th align="left" bgcolor="#DAEBED" class="T11b" valign="middle" width="200">
+     聯絡人
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop" height="25">
+     范卿雲
+    </td>
+   </tr>
+   <tr class="award_table_tr_1">
+    <th align="left" bgcolor="#DAEBED" class="T11b" valign="middle" width="200">
+     聯絡電話
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop" height="25">
+     (02)28757250
+    </td>
+   </tr>
+   <tr class="award_table_tr_1">
+    <th align="left" bgcolor="#DAEBED" class="T11b" style="height: 25px" valign="middle" width="200">
+     傳真號碼
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop" height="25">
+     (02)28757741
+    </td>
+   </tr>
+   <!-- delimiter 機關資料 End -->
+   <!-- delimiter 已公告/採購資料 Start -->
+   <tr class="award_table_tr_2">
+    <td align="center" bgcolor="#FCD847" class="form_head" rowspan="28 " valign="middle" width="38">
+     <span class="newstop">
+      已
+      <br/>
+      公
+      <br/>
+      告
+      <br/>
+      資
+      <br/>
+      料
+     </span>
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     標案案號
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     104265S
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     招標方式
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     公開招標
+     <div class="remind_msg">
+     </div>
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     決標方式
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     最低標
+     <div class="remind_msg">
+     </div>
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否依政府採購法施行
+     <br>
+      細則第64條之2辦理
+     </br>
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+     <div class="remind_msg">
+     </div>
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     新增公告傳輸次數
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     01
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否依據採購法第106條第1項第1款辦理
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     標案名稱
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     綠色雙層內包布單等25項訂定二年單價契約
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     決標資料類別
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     決標公告
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否屬共同供應契約採購
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否屬二以上機關之聯合採購(不適用共同供應契約規定)
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否複數決標
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     是
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     標的分類
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     &lt;財物類&gt;    
+                            27
+                            除服裝以外之紡織品
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否屬統包
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否應依公共工程專業技師簽證規則實施技師簽證
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     開標時間
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     104/09/10 09:00
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     原公告日期
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     104/08/07
+     <span>
+      <span class="remind_msg">
+       原公告日期係指最近1次招標公告或更正日期
+      </span>
+     </span>
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     採購金額級距
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     公告金額以上未達查核金額
+     <div class="remind_msg">
+     </div>
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     辦理方式
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     自辦
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否適用條約或
+     <br>
+      協定之採購
+     </br>
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     <style type="text/css">
+      .gpa_shift {
+		margin-left: 30px;
+	}
+	.gpa_shift2 {
+		margin-left: 60px;
+	}
+	.gpa_error_msg {
+		color:#FF0000;
+		font-size:10pt;
+	}
+     </style>
+     <strong>
+      是否適用WTO政府採購協定(GPA)：
+     </strong>
+     是
+     <hr>
+      <strong>
+       是否適用臺紐經濟合作協定(ANZTEC)：
+      </strong>
+      否
+      <hr>
+       <strong>
+        是否適用臺星經濟夥伴協定(ASTEP)：
+       </strong>
+       是
+      </hr>
+     </hr>
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     預算金額是否公開
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     是
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     預算金額
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     30,398,800元
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否受機關補助
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     履約地點
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     臺北市(非原住民地區)
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     履約地點（含地區）
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     臺北市－北投區
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否含特別預算
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     歸屬計畫類別
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     非屬愛台十二項計畫
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     本案採購契約是否採用主管機關訂定之範本
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     是
+    </td>
+   </tr>
+   <!-- 不公開於其他機關、廠商端、民眾端及政府採購公報電子版 -->
+   <!-- 政府計畫管理資訊網之標案案號有值才顯示，但不公開於廠商端/民眾端及政府採購公報 -->
+   <!-- delimiter 已公告/採購資料 End -->
+   <!-- delimiter 資訊服務價格 Start -->
+   <!-- delimiter 資訊服務價格 End -->
+   <!-- delimiter 投標廠商 Start -->
+   <tr class="award_table_tr_3">
+    <td align="center" bgcolor="#F5BF65" rowspan="2" valign="middle" width="38">
+     <span class="newstop">
+      投
+      <br/>
+      標
+      <br/>
+      廠
+      <br/>
+      商
+     </span>
+    </td>
+   </tr>
+   <tr class="award_table_tr_3">
+    <td colspan="3" style="padding-top:0px; padding-bottom:0px; padding-right:0px; padding-left:0px;">
+     <table bgcolor="#F5BF65" border="1" bordercolor="#F5BF65" cellpadding="1" cellspacing="1" class="table_block tender_table" height="100%" style="border-collapse:collapse;" summary="*" width="100%">
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        投標廠商家數
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        7
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        投標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商代碼
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        78154655
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        凱富興業廠
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否得標
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        組織型態
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        商業登記
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商業別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        其他
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商地址
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        508彰化縣和美鎮彰化縣和美鎮山犁里仁化路１７號１樓
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商電話
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        (04)
+			
+			
+				7570860
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        475,000元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        得標廠商國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        中華民國(Republic of China (Taiwan))
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否為中小企業
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        履約起迄日期
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        104/09/11－106/09/10
+				(預估)
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        雇用員工總人數是否
+        <br>
+         超過100人
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        否
+       </td>
+      </tr>
+      <!-- isEmployeeOver100 -->
+      <!-- isObtain -->
+      <!-- isNotObtain end -->
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        投標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商代碼
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        70541649
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否得標
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        否
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        組織型態
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        公司登記
+       </td>
+      </tr>
+      <!-- isObtain -->
+      <!-- isNotObtain start -->
+      <!-- isNotObtain end -->
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        投標廠商3
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商代碼
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        35900230
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        大度企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否得標
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        否
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        組織型態
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        公司登記
+       </td>
+      </tr>
+      <!-- isObtain -->
+      <!-- isNotObtain start -->
+      <!-- isNotObtain end -->
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        投標廠商4
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商代碼
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        86863531
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德耐股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否得標
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        否
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        組織型態
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        公司登記
+       </td>
+      </tr>
+      <!-- isObtain -->
+      <!-- isNotObtain start -->
+      <!-- isNotObtain end -->
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        投標廠商5
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商代碼
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        97305176
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否得標
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        組織型態
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        公司登記
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商業別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        其他
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商地址
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        106臺北市大安區基隆路2段112號11樓
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商電話
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        (02)
+			
+			
+				29791398
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        2,480,500元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        得標廠商國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        中華民國(Republic of China (Taiwan))
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否為中小企業
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        履約起迄日期
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        104/09/11－106/09/10
+				(預估)
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        雇用員工總人數是否
+        <br>
+         超過100人
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        否
+       </td>
+      </tr>
+      <!-- isEmployeeOver100 -->
+      <!-- isObtain -->
+      <!-- isNotObtain end -->
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        投標廠商6
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商代碼
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        15222424
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        東彰企業股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否得標
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        組織型態
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        公司登記
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商業別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        其他
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商地址
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        231新北市新店區中正路680巷8弄6號2樓
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商電話
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        (04)
+			
+			
+				7355631
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        1,792,000元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        得標廠商國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        中華民國(Republic of China (Taiwan))
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否為中小企業
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        履約起迄日期
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        104/09/11－106/09/10
+				(預估)
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        雇用員工總人數是否
+        <br>
+         超過100人
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        否
+       </td>
+      </tr>
+      <!-- isEmployeeOver100 -->
+      <!-- isObtain -->
+      <!-- isNotObtain end -->
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        投標廠商7
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商代碼
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        35378851
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否得標
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        組織型態
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        公司登記
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商業別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        其他
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商地址
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        241新北市三重區同安街五九號
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商電話
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        (02)
+			
+			
+				29736029
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        8,970,600元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        得標廠商國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        中華民國(Republic of China (Taiwan))
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否為中小企業
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        履約起迄日期
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        104/09/11－106/09/10
+				(預估)
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        雇用員工總人數是否
+        <br>
+         超過100人
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        否
+       </td>
+      </tr>
+      <!-- isEmployeeOver100 -->
+      <!-- isObtain -->
+      <!-- isNotObtain end -->
+     </table>
+    </td>
+   </tr>
+   <!-- delimiter 投標廠商 End -->
+   <!-- delimiter 簽約廠商 Start -->
+   <!-- delimiter 簽約廠商 End -->
+   <!-- delimiter 決標品項 Start -->
+   <tr class="award_table_tr_4">
+    <td align="center" bgcolor="#FF9999" rowspan="2" valign="middle" width="38">
+     <span class="newstop">
+      決
+      <br/>
+      標
+      <br/>
+      品
+      <br/>
+      項
+     </span>
+    </td>
+   </tr>
+   <tr class="award_table_tr_4">
+    <td colspan="3" style="padding-top:0px; padding-bottom:0px; padding-right:0px; padding-left:0px;">
+     <table bgcolor="#FF9999" border="1" bordercolor="#FF9999" cellpadding="1" cellspacing="1" class="table_block tender_table" height="100%" style="border-collapse:collapse;" summary="*" width="100%">
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標品項數
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        21
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第1品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        綠色手術床單(推床用)
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        凱富興業廠
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        190
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        2500
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        475,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        475,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           475,000元
+           <br/>
+           肆
+           <span style="color:red">
+            拾
+           </span>
+           柒萬伍仟元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        627,500
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        大度企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        837,500
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商3
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        562,500
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商4
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        482,500
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商5
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德耐股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        否
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        押標金未繳或不符合規定
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第2品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        手術室綠色擦手方巾
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        16.3
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        50000
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        815,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        815,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           815,000元
+           <br/>
+           捌
+           <span style="color:red">
+            拾
+           </span>
+           壹萬伍仟元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第3品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        綠色刷手衣
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        140
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        7700
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,078,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,078,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           1,078,000元
+           <br/>
+           壹
+           <span style="color:red">
+            佰
+           </span>
+           零柒萬捌仟元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,386,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        大度企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,617,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商3
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,124,200
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第4品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        綠色刷手褲
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        140
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        7700
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,078,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,078,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           1,078,000元
+           <br/>
+           壹
+           <span style="color:red">
+            佰
+           </span>
+           零柒萬捌仟元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,255,100
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        大度企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,540,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商3
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,139,600
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第5品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        粉紅色嬰兒包布
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        136
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1200
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        163,200
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        163,200
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           163,200元
+           <br/>
+           壹
+           <span style="color:red">
+            拾
+           </span>
+           陸萬參仟貳佰元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        187,200
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        186,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第6品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        禦寒夾克
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        460
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        500
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        230,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        231,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           230,000元
+           <br/>
+           貳
+           <span style="color:red">
+            拾
+           </span>
+           參萬元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第7品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        男病人睡衣
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        206
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        2950
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        607,700
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        607,700
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           607,700元
+           <br/>
+           陸
+           <span style="color:red">
+            拾
+           </span>
+           萬零柒仟柒佰元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        823,050
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        大度企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        885,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商3
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        646,050
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第8品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        男病人睡褲
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        158
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        4150
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        655,700
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        672,300
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           655,700元
+           <br/>
+           陸
+           <span style="color:red">
+            拾
+           </span>
+           伍萬伍仟柒佰元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,037,500
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        大度企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,245,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商3
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        697,200
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第9品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        女病人睡衣
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        204
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        5050
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,030,200
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,030,200
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           1,030,200元
+           <br/>
+           壹
+           <span style="color:red">
+            佰
+           </span>
+           零參萬零貳佰元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,408,950
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        大度企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,515,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商3
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,105,950
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第10品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        女病人睡褲
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        155
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        5850
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        906,750
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        947,700
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           906,750元
+           <br/>
+           玖
+           <span style="color:red">
+            拾
+           </span>
+           萬零陸仟柒佰伍拾元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,421,550
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        大度企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,755,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商3
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        982,800
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第11品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        男病患開叉褲
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        105
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1000
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        105,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        105,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           105,000元
+           <br/>
+           壹
+           <span style="color:red">
+            拾
+           </span>
+           萬零伍仟元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        201,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        137,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第12品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        女病患開叉褲
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        105
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1900
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        199,500
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        199,500
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           199,500元
+           <br/>
+           壹
+           <span style="color:red">
+            拾
+           </span>
+           玖萬玖仟伍佰元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        381,900
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        256,500
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第13品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        骨科專用褲
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        101
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        300
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        30,300
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        30,300
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           30,300元
+           <br/>
+           參
+           <span style="color:red">
+            萬
+           </span>
+           零參佰元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        39,300
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第14品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        漂白布中單
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        143
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        6680
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        955,240
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        968,600
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           955,240元
+           <br/>
+           玖
+           <span style="color:red">
+            拾
+           </span>
+           伍萬伍仟貳佰肆拾元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        2,311,280
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        大度企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        2,672,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商3
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,088,840
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商4
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        凱富興業廠
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        2,404,800
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商5
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        東彰企業股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,362,720
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第15品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        女失禁長袍
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        150
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        3000
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        450,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        450,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           450,000元
+           <br/>
+           肆
+           <span style="color:red">
+            拾
+           </span>
+           伍萬元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        774,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        555,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第16品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        男失禁長袍
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        150
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        4600
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        690,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        690,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           690,000元
+           <br/>
+           陸
+           <span style="color:red">
+            拾
+           </span>
+           玖萬元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,186,800
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        841,800
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第17品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        醫護隔離長袍
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        138
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        4720
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        651,360
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        651,360
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           651,360元
+           <br/>
+           陸
+           <span style="color:red">
+            拾
+           </span>
+           伍萬壹仟參佰陸拾元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,043,120
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        854,320
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第18品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        黃色被套
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        東彰企業股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        448
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        4000
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,792,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,792,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           1,792,000元
+           <br/>
+           壹
+           <span style="color:red">
+            佰
+           </span>
+           柒拾玖萬貳仟元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,900,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第19品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        黃提花罩單
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        435
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        3300
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,435,500
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,438,800
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           1,435,500元
+           <br/>
+           壹
+           <span style="color:red">
+            佰
+           </span>
+           肆拾參萬伍仟伍佰元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        東彰企業股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1,518,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第20品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        藍白格衣
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        160
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1900
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        304,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        304,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           304,000元
+           <br/>
+           參
+           <span style="color:red">
+            拾
+           </span>
+           萬零肆仟元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        433,200
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        潔緯企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        366,700
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第21品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        病房用污衣袋
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        件
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        華昇盛被服企業有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標單價
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        101
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        650
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        65,650
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        65,650
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           65,650元
+           <br/>
+           陸
+           <span style="color:red">
+            萬
+           </span>
+           伍仟陸佰伍拾元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        美德向邦股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否合格
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        78,000
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        未得標原因
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        資格、規格合於招標文件但非最低(高)標
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        標價偏低理由
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+     </table>
+    </td>
+   </tr>
+   <!-- delimiter 決標品項 End -->
+   <!-- delimiter 最有利標 Start -->
+   <!-- delimiter 最有利標 End -->
+   <!-- delimiter 英文公告 Start -->
+   <!-- delimiter 英文公告 End -->
+   <!-- delimiter 決標資料 Start -->
+   <tr class="award_table_tr_6">
+    <td align="center" bgcolor="#c79961" class="form_head" rowspan="14" valign="middle" width="38">
+     <span class="newstop">
+      決
+      <br/>
+      標
+      <br/>
+      資
+      <br/>
+      料
+     </span>
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     決標公告序號
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     001
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     決標日期
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     104/09/10
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     決標公告日期
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     104/09/15
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     執行現況
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     複數決標案，部分決標
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     是否刊登公報
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     是
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     底價金額
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     13,793,310元
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     底價金額是否公開
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     是
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     總決標金額
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     13,718,100元
+     <div class="shift">
+      本決標金額係以預估條件估算之預估金額。
+      <br/>
+      估算方式：依機關近年使用量，預估本案各項需求數量，決標後分別乘以各項決標單價加總所得
+     </div>
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     總決標金額是否公開
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     是
+    </td>
+   </tr>
+   <!-- 最低標標案才顯示是否依採購法第58條規定採次低標或次次低標決標 -->
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     契約是否訂有依物價指數調整價金規定
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     未列物價調整規定說明
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     財物案
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     履約執行機關
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     機關代碼：3.32.80
+     <br>
+      機關名稱：臺北榮民總醫院
+     </br>
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     附加說明
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+    </td>
+   </tr>
+   <!-- delimiter 決標資料 End -->
+   <!-- delimiter 撤銷公告 Start -->
+   <!-- delimiter 撤銷公告 End -->
+  </tbody>
+ </table>
+</div>
